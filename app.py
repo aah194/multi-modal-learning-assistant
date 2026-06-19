@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import speech_recognition as sr
+# import speech_recognition as sr
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from PIL import Image
