@@ -195,80 +195,84 @@ with tab2:
 # ====================================================
 # VOICE ASSISTANT
 # ====================================================
+# with tab3:
+
+#     st.write(
+#         "Click record and speak."
+#     )
+
+#     if st.button(
+#         "🎤 Record Voice"
+#     ):
+
+#         recognizer = sr.Recognizer()
+
+#         with sr.Microphone() as source:
+
+#             st.info(
+#                 "Listening..."
+#             )
+
+#             audio = recognizer.listen(
+#                 source,
+#                 timeout=10
+#             )
+
+#         try:
+
+#             text = recognizer.recognize_google(
+#                 audio
+#             )
+
+#             st.success(
+#                 f"You said: {text}"
+#             )
+
+#             client = genai.Client(
+#                 api_key=api_key
+#             )
+
+#             response = client.models.generate_content(
+#                 model="gemini-2.5-flash",
+#                 contents=text
+#             )
+
+#             st.session_state.voice_answer = (
+#                 response.text
+#             )
+
+#         except Exception as e:
+
+#             st.error(
+#                 str(e)
+#             )
+
+#     if "voice_answer" in st.session_state:
+
+#         st.subheader(
+#             "AI Response"
+#         )
+
+#         st.write(
+#             st.session_state.voice_answer
+#         )
+
+#     if st.button(
+#         "🔊 Speak Answer"
+#     ):
+
+#         text_to_speech(
+#         st.session_state.voice_answer
+#     )
+
+#     if st.button(
+#         "⏹ Stop Speaking"
+#     ):
+
+#         stop_speaking()
 with tab3:
 
-    st.write(
-        "Click record and speak."
-    )
-
-    if st.button(
-        "🎤 Record Voice"
-    ):
-
-        recognizer = sr.Recognizer()
-
-        with sr.Microphone() as source:
-
-            st.info(
-                "Listening..."
-            )
-
-            audio = recognizer.listen(
-                source,
-                timeout=10
-            )
-
-        try:
-
-            text = recognizer.recognize_google(
-                audio
-            )
-
-            st.success(
-                f"You said: {text}"
-            )
-
-            client = genai.Client(
-                api_key=api_key
-            )
-
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=text
-            )
-
-            st.session_state.voice_answer = (
-                response.text
-            )
-
-        except Exception as e:
-
-            st.error(
-                str(e)
-            )
-
-    if "voice_answer" in st.session_state:
-
-        st.subheader(
-            "AI Response"
-        )
-
-        st.write(
-            st.session_state.voice_answer
-        )
-
-    if st.button(
-        "🔊 Speak Answer"
-    ):
-
-        text_to_speech(
-        st.session_state.voice_answer
-    )
-
-    if st.button(
-        "⏹ Stop Speaking"
-    ):
-
-        stop_speaking()
-        
+    st.info(
+        "Voice Assistant is available only in the local desktop version."
+    )       
             
