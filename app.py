@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import speech_recognition as sr
+# import speech_recognition as sr
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from PIL import Image
@@ -12,7 +12,7 @@ from modules.search import search_chunks
 from modules.gemini_helper import get_answer
 from modules.image_helper import analyze_image
 from modules.multimodal_helper import multimodal_answer
-from modules.voice_helper import speech_to_text, text_to_speech,stop_speaking
+# from modules.voice_helper import speech_to_text, text_to_speech,stop_speaking
 
 load_dotenv()
 
